@@ -9,6 +9,40 @@
 Ввод:                                                 Вывод:
 пара-ра-рам рам-пам-папам па-ра-па-дам                Парам пам-пам """
 
+# def count_vowel(frases_VP):
+#     vowels = []
+#     for i in frases_VP:
+#         vowel = 0
+#         for j in i:
+#             if j in 'аеиоуэюя':
+#                 vowel += 1
+#         vowels.append(vowel)
+#     return vowels
+#
+#
+#
+# def check_vowel(vowels):
+#     check = vowels[0]
+#     c = 0
+#     for z in range(1, len(vowels)):
+#         if vowels[z] == check:
+#             c += 1
+#         else:
+#             c = 0
+#             break
+#     return c
+#
+#
+#
+#
+# frases_VP = input("Введите фразы через пробел : ").split()
+# count_vowels = count_vowel(frases_VP)
+# if check_vowel(count_vowels) == 0:
+#     print("Пам парам")
+# else:
+#     print("Парам пам-пам")
+
+# 2 solution_______________________________
 def count_vowel(frases_VP):
     vowels = []
     for i in frases_VP:
@@ -22,22 +56,13 @@ def count_vowel(frases_VP):
 
 
 def check_vowel(vowels):
-    check = vowels[0]
-    c = 0
-    for z in range(1, len(vowels)):
-        if vowels[z] == check:
-            c += 1
-        else:
-            c = 0
-            break
-    return c
-
+    if vowels.count(vowels[0]) == len(vowels):
+        print("Парам пам-пам")
+    else:
+        print("Пам парам")
 
 
 
 frases_VP = input("Введите фразы через пробел : ").split()
 count_vowels = count_vowel(frases_VP)
-if check_vowel(count_vowels) == 0:
-    print("Пам парам")
-else:
-    print("Парам пам-пам")
+check = check_vowel(count_vowels)
